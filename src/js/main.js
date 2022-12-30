@@ -18,6 +18,9 @@ window.addEventListener('DOMContentLoaded', () => {
 
     showUpSlider.init();
 
+    const modulesSlider = new MainSlider({container:'.moduleapp', btns:'.next'});
+    modulesSlider.render();
+
     const moduleSlider = new MiniSlider({
         container:'.modules__content-slider',
         prev:'.modules__info-btns .slick-prev',
@@ -38,8 +41,8 @@ window.addEventListener('DOMContentLoaded', () => {
 
     feedSlider.init();
 
-    const player = new VideoPlayer('.showup .play', '.overlay');
-    player.init();
+    new VideoPlayer('.showup .play', '.overlay').init();
+    new VideoPlayer('.module__video-item .play', '.overlay').init();
 
     new Difference('.officerold', '.officernew', '.officer__card-item').init();
 
